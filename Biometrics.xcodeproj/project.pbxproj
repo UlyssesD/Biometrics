@@ -26,6 +26,7 @@
 		4AE930841A8A14250094BE7C /* libopencv_superres.2.4.10.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE930721A8A14250094BE7C /* libopencv_superres.2.4.10.dylib */; };
 		4AE930851A8A14250094BE7C /* libopencv_video.2.4.10.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE930731A8A14250094BE7C /* libopencv_video.2.4.10.dylib */; };
 		4AE930861A8A14250094BE7C /* libopencv_videostab.2.4.10.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE930741A8A14250094BE7C /* libopencv_videostab.2.4.10.dylib */; };
+		A904D7DF1A8A16CC00F86D97 /* prova.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A904D7DD1A8A16CC00F86D97 /* prova.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,6 +63,8 @@
 		4AE930721A8A14250094BE7C /* libopencv_superres.2.4.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_superres.2.4.10.dylib; path = ../../../../../usr/local/lib/libopencv_superres.2.4.10.dylib; sourceTree = "<group>"; };
 		4AE930731A8A14250094BE7C /* libopencv_video.2.4.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_video.2.4.10.dylib; path = ../../../../../usr/local/lib/libopencv_video.2.4.10.dylib; sourceTree = "<group>"; };
 		4AE930741A8A14250094BE7C /* libopencv_videostab.2.4.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_videostab.2.4.10.dylib; path = ../../../../../usr/local/lib/libopencv_videostab.2.4.10.dylib; sourceTree = "<group>"; };
+		A904D7DD1A8A16CC00F86D97 /* prova.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = prova.cpp; sourceTree = "<group>"; };
+		A904D7DE1A8A16CC00F86D97 /* prova.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prova.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				4AE9305D1A8A13AE0094BE7C /* main.cpp */,
+				A904D7DD1A8A16CC00F86D97 /* prova.cpp */,
+				A904D7DE1A8A16CC00F86D97 /* prova.h */,
 			);
 			path = Biometrics;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A904D7DF1A8A16CC00F86D97 /* prova.cpp in Sources */,
 				4AE9305E1A8A13AE0094BE7C /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +331,7 @@
 				4AE930611A8A13AE0094BE7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
