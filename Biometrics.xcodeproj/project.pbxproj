@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4AE9305E1A8A13AE0094BE7C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4AE9305D1A8A13AE0094BE7C /* main.cpp */; };
 		4AE930751A8A14250094BE7C /* libopencv_calib3d.2.4.10.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE930631A8A14250094BE7C /* libopencv_calib3d.2.4.10.dylib */; };
 		4AE930761A8A14250094BE7C /* libopencv_contrib.2.4.10.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE930641A8A14250094BE7C /* libopencv_contrib.2.4.10.dylib */; };
 		4AE930771A8A14250094BE7C /* libopencv_core.2.4.10.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE930651A8A14250094BE7C /* libopencv_core.2.4.10.dylib */; };
@@ -42,9 +41,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4AE930551A8A0FA00094BE7C /* Test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
 		4AE9305A1A8A13AE0094BE7C /* Biometrics */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Biometrics; sourceTree = BUILT_PRODUCTS_DIR; };
-		4AE9305D1A8A13AE0094BE7C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4AE930631A8A14250094BE7C /* libopencv_calib3d.2.4.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_calib3d.2.4.10.dylib; path = ../../../../../usr/local/lib/libopencv_calib3d.2.4.10.dylib; sourceTree = "<group>"; };
 		4AE930641A8A14250094BE7C /* libopencv_contrib.2.4.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_contrib.2.4.10.dylib; path = ../../../../../usr/local/lib/libopencv_contrib.2.4.10.dylib; sourceTree = "<group>"; };
 		4AE930651A8A14250094BE7C /* libopencv_core.2.4.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_core.2.4.10.dylib; path = ../../../../../usr/local/lib/libopencv_core.2.4.10.dylib; sourceTree = "<group>"; };
@@ -100,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				4AE930621A8A14070094BE7C /* OpenCV Frameworks */,
-				4AE930551A8A0FA00094BE7C /* Test.cpp */,
 				4AE9305C1A8A13AE0094BE7C /* Biometrics */,
 				4AE9305B1A8A13AE0094BE7C /* Products */,
 			);
@@ -117,7 +113,6 @@
 		4AE9305C1A8A13AE0094BE7C /* Biometrics */ = {
 			isa = PBXGroup;
 			children = (
-				4AE9305D1A8A13AE0094BE7C /* main.cpp */,
 				A904D7DD1A8A16CC00F86D97 /* prova.cpp */,
 				A904D7DE1A8A16CC00F86D97 /* prova.h */,
 			);
@@ -205,7 +200,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A904D7DF1A8A16CC00F86D97 /* prova.cpp in Sources */,
-				4AE9305E1A8A13AE0094BE7C /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

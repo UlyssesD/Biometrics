@@ -26,8 +26,8 @@ using namespace cv;
 void detectAndDisplay( Mat frame );
 
 /** Global variables */
-String face_cascade_name = "/Users/Marco/Downloads/opencv-2.4.10/data/lbpcascades/lbpcascade_frontalface.xml";
-String eyes_cascade_name = "/Users/Marco/Downloads/opencv-2.4.10/data/haarcascades/haarcascade_eye_tree_eyeglasses.xml";
+String face_cascade_name = "/usr/local/share/OpenCV/lbpcascades/lbpcascade_frontalface.xml";
+String eyes_cascade_name = "/usr/local/share/OpenCV/haarcascades/haarcascade_eye_tree_eyeglasses.xml";
 CascadeClassifier face_cascade;
 CascadeClassifier eyes_cascade;
 string window_name = "Capture - Face detection";
