@@ -96,6 +96,7 @@
 		4AE9304E1A8A0F920094BE7C = {
 			isa = PBXGroup;
 			children = (
+				4AE930871A8A1C830094BE7C /* Resources */,
 				4AE930621A8A14070094BE7C /* OpenCV Frameworks */,
 				4AE9305C1A8A13AE0094BE7C /* Biometrics */,
 				4AE9305B1A8A13AE0094BE7C /* Products */,
@@ -142,6 +143,13 @@
 				4AE930741A8A14250094BE7C /* libopencv_videostab.2.4.10.dylib */,
 			);
 			name = "OpenCV Frameworks";
+			sourceTree = "<group>";
+		};
+		4AE930871A8A1C830094BE7C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +230,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -269,6 +278,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
