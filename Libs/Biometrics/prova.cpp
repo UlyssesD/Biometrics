@@ -32,48 +32,10 @@ CascadeClassifier face_cascade;
 CascadeClassifier eyes_cascade;
 string window_name = "Capture - Face detection";
 string capture_window = "Grayscale Snapshot Taken";
-string histogram_window = "Image Histogram";
-Mat cropped_image;
 
 RNG rng(12345);
 
 void on_push(int state, void*) {}
-
-void show_histogram(std::string const& name, cv::Mat1b const& image)
-{
-    // Set histogram bins count
-    int bins = 256;
-    int histSize[] = {bins};
-    // Set ranges for histogram bins
-    float lranges[] = {0, 256};
-    const float* ranges[] = {lranges};
-    // create matrix for histogram
-    cv::Mat hist;
-    int channels[] = {0};
-    
-    // create matrix for histogram visualization
-    int const hist_height = 256;
-    cv::Mat3b hist_image = cv::Mat3b::zeros(hist_height, bins);
-    
-    cv::calcHist(&image, 1, channels, cv::Mat(), hist, 1, histSize, ranges, true, false);
-    
-    double max_val=0;
-    minMaxLoc(hist, 0, &max_val);
-    
-    // visualize each bin
-    for(int b = 0; b < bins; b++) {
-        float const binVal = hist.at<float>(b);
-        int   const height = cvRound(binVal*hist_height/max_val);
-        cv::line
-        ( hist_image
-         , cv::Point(b, hist_height-height), cv::Point(b, hist_height)
-         , cv::Scalar::all(255)
-         );
-    }
-    cv::imshow(name, hist_image);
-}
-
-
 /**
  * @function main
  */
@@ -116,17 +78,6 @@ int main( void )
           imshow(capture_window, frame_gray);
           //imwrite("/Users/Ulysses_D/Desktop/capture_gray.jpg",frame_gray);
           
-          
-          
-      }
-      if ( (char) c == 'h'){
-          imwrite(".*/Desktop/capture.jpg",frame);
-          Mat frame_gray;
-          cvtColor( frame, frame_gray, COLOR_BGR2GRAY );
-          equalizeHist( frame_gray, frame_gray );
-          imshow(capture_window, cropped_image);
-          show_histogram(histogram_window, cropped_image);
-        
       }
     }
   }
@@ -146,32 +97,31 @@ void detectAndDisplay( Mat frame )
    equalizeHist( frame_gray, frame_gray );
    
    //-- Detect faces
-   face_cascade.detectMultiScale( frame_gray, faces, 1.1, 2, 0 |CV_HAAR_SCALE_IMAGE, Size(30, 30) );
+   face_cascade.detectMultiScale( frame_gray, faces, 1.1, 2, 0 |CV_HAAR_SCALE_IMAGE, Size(100, 100) );
 
    for( size_t i = 0; i < faces.size(); i++ )
     {
       Mat faceROI = frame_gray( faces[i] );
-      //std::vector<Rect> eyes;
+      std::vector<Rect> eyes;
 
       //-- In each face, detect eyes
-      //eyes_cascade.detectMultiScale( faceROI, eyes, 1.1, 2, 0 |CV_HAAR_SCALE_IMAGE, Size(30, 30) );
-      //if( eyes.size() == 2)
-      //{
+      eyes_cascade.detectMultiScale( faceROI, eyes, 1.1, 2, 0 |CV_HAAR_SCALE_IMAGE, Size(30, 30) );
+      if( eyes.size() == 2)
+      {
          //-- Draw the face
-         //Point center( faces[i].x + faces[i].width/2, faces[i].y + faces[i].height/2 );
-         //ellipse( frame, center, Size( faces[i].width/2, faces[i].height/2), 0, 0, 360, Scalar( 0, 0, 255 ), 2, 8, 0 );
-        
-        cropped_image = faceROI.clone();
-        rectangle(frame, Point(faces[i].x, faces[i].y), Point(faces[i].x + faces[i].width, faces[i].y + faces[i].height), Scalar( 0, 255, 0 ));
-         //for( size_t j = 0; j < eyes.size(); j++ )
-         //{ //-- Draw the eyes
-            //Point eye_center( faces[i].x + eyes[j].x + eyes[j].width/2, faces[i].y + eyes[j].y + eyes[j].height/2 );
-            //int radius = cvRound( (eyes[j].width + eyes[j].height)*0.25 );
+         Point center( faces[i].x + faces[i].width/2, faces[i].y + faces[i].height/2 );
+         ellipse( frame, center, Size( faces[i].width/2, faces[i].height/2), 0, 0, 360, Scalar( 0, 0, 255 ), 2, 8, 0 );
+
+         for( size_t j = 0; j < eyes.size(); j++ )
+          { //-- Draw the eyes
+            Point eye_center( faces[i].x + eyes[j].x + eyes[j].width/2, faces[i].y + eyes[j].y + eyes[j].height/2 );
+            int radius = cvRound( (eyes[j].width + eyes[j].height)*0.25 );
             //circle( frame, eye_center, radius, Scalar( 0, 255, 0 ), 3, 8, 0 );
-            //circle(frame, eye_center, 1, Scalar( 0, 255, 0 ), -1, 8);
-          //}
-       //}
+              circle(frame, eye_center, 1, Scalar( 0, 255, 0 ));
+          }
+       }
+
     }
    //-- Show what you got
-   imshow( window_name, frame);
+   imshow( window_name, frame );
 }

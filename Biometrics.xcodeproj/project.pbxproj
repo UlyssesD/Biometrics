@@ -41,6 +41,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4A8F33BA1AEFD02A00D4F6E7 /* Libs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Libs; sourceTree = "<group>"; };
 		4AE9305A1A8A13AE0094BE7C /* Biometrics */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Biometrics; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AE930631A8A14250094BE7C /* libopencv_calib3d.2.4.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_calib3d.2.4.10.dylib; path = ../../../../../usr/local/lib/libopencv_calib3d.2.4.10.dylib; sourceTree = "<group>"; };
 		4AE930641A8A14250094BE7C /* libopencv_contrib.2.4.10.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_contrib.2.4.10.dylib; path = ../../../../../usr/local/lib/libopencv_contrib.2.4.10.dylib; sourceTree = "<group>"; };
@@ -96,6 +97,7 @@
 		4AE9304E1A8A0F920094BE7C = {
 			isa = PBXGroup;
 			children = (
+				4A8F33BA1AEFD02A00D4F6E7 /* Libs */,
 				4AE930871A8A1C830094BE7C /* Resources */,
 				4AE930621A8A14070094BE7C /* OpenCV Frameworks */,
 				4AE9305C1A8A13AE0094BE7C /* Biometrics */,
